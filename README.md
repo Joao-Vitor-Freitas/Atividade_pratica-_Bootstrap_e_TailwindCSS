@@ -1,2 +1,3 @@
-# Atividade_pratica-_Bootstrap_e_TailwindCSS
-Atividade da faculdad, recriando a mesma página mas com ferramentas diferentes
+# Atividade_pratica-TailwindCSS
+Atividade da faculdade, recriando a mesma página mas com ferramentas diferentes 
+## Versão TailwindCSS

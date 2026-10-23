@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Empresa | Tailwind CSS</title>
+
+  <!-- Tailwind CSS via CDN (Play CDN) -->
+  <script src="https://cdn.tailwindcss.com/3.4.17"></script>
+  <script>
+    // Personalização do tema direto no HTML (equivale ao tailwind.config.js)
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            marca: { DEFAULT: '#e8573a', escuro: '#cf4528' },
+            fundo: '#f1f1f1',
+            texto: '#444444',
+          },
+          fontFamily: {
+            sans: ['Arial', 'Helvetica', 'sans-serif'], // troca a fonte padrão pelo Arial do protótipo
+            titulo: ['"Arial Black"', 'Arial', 'sans-serif'],
+          },
+          maxWidth: { pagina: '1224px' },
+        },
+      },
+    }
+  </script>
+  <!-- Apenas o que não vale como classe utilitária -->
+  <link href="style.css" rel="stylesheet">
+</head>
+<body class="font-sans text-texto antialiased">
+
+  <!-- HERO -->
+  <header class="hero flex min-h-[607px] items-center justify-center">
+    <h1 class="font-titulo text-5xl font-black uppercase tracking-wide text-white md:text-7xl">Empresa</h1>
+  </header>
+
+  <!-- CONTEÚDO PRINCIPAL -->
+  <main class="mx-auto max-w-pagina px-3 py-12">
+    <section class="pb-12 pt-6">
+      <h2 class="mb-1 text-5xl font-normal uppercase">Minha página</h2>
+      <p class="mb-12 text-[1.3rem]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien leo, mollis in ultrices quis, interdum sed mi
+      </p>
+
+      <img src="img/banner.jpg" class="mb-12 h-auto w-full" alt="Píer antigo com gaivotas ao entardecer">
+
+      <p class="mb-4 leading-[2.05]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien leo, mollis in ultrices quis, interdum sed mi. Sed in consequat diam. Duis ultrices viverra nisi, at pretium orci facilisis eget. Donec tempus dictum erat a ultrices. Ut ultrices eros eu vehicula commodo. Sed mattis non mauris eu pellentesque. Nam vitae ipsum ultricies quam convallis tempor. Fusce at nisl lobortis, semper ante sit amet, imperdiet arcu. Aenean interdum lorem ipsum, sit amet tincidunt lorem sagittis a. Donec sed viverra nibh, et dictum leo.
+      </p>
+      <p class="mb-4 leading-[2.05]">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam sapien leo, mollis in ultrices quis, interdum sed mi. Sed in consequat diam. Duis ultrices viverra nisi, at pretium orci facilisis eget. Donec tempus dictum erat a ultrices. Ut ultrices eros eu vehicula commodo. Sed mattis non mauris eu pellentesque. Nam vitae ipsum ultricies quam convallis tempor. Fusce at nisl lobortis, semper ante sit amet, imperdiet arcu. Aenean interdum lorem ipsum, sit amet tincidunt lorem sagittis a. Donec sed viverra nibh, et dictum leo.
+      </p>
+    </section>
+  </main>
+
+  <!-- CARDS -->
+  <section class="bg-fundo">
+    <div class="mx-auto grid max-w-pagina grid-cols-1 gap-12 px-3 py-16 md:grid-cols-3">
+
+      <article>
+        <h3 class="mb-8 text-[1.4rem] font-normal uppercase">ClicRBS</h3>
+        <img src="img/card1.jpg" class="mb-8 h-[168px] w-full object-cover" alt="Barril vermelho enferrujado na grama">
+        <p class="mb-8 text-[.94rem] leading-[1.1]">
+          Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.
+        </p>
+        <a href="https://www.clicrbs.com.br" target="_blank" rel="noopener"
+           class="inline-block rounded-full bg-marca px-[1.6rem] py-[.85rem] uppercase text-white transition-colors hover:bg-marca-escuro">ClicRBS</a>
+      </article>
+
+      <article>
+        <h3 class="mb-8 text-[1.4rem] font-normal uppercase">Senac RS</h3>
+        <img src="img/card2.jpg" class="mb-8 h-[168px] w-full object-cover" alt="Espiga de trigo em close">
+        <p class="mb-8 text-[.94rem] leading-[1.1]">
+          Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.
+        </p>
+        <a href="https://www.senacrs.com.br" target="_blank" rel="noopener"
+           class="inline-block rounded-full bg-marca px-[1.6rem] py-[.85rem] uppercase text-white transition-colors hover:bg-marca-escuro">Senac</a>
+      </article>
+
+      <article>
+        <h3 class="mb-8 text-[1.4rem] font-normal uppercase">Portal Terra</h3>
+        <img src="img/card3.jpg" class="mb-8 h-[168px] w-full object-cover" alt="Cerca de arame farpado em meio ao capim seco">
+        <p class="mb-8 text-[.94rem] leading-[1.1]">
+          Nullam non wisi a sem semper eleifend. Donec mattis libero eget urna. Donec leo, vivamus fermentum nibh in augue praesent a lacus at urna congue rutrum. Quisque dictum. Pellentesque viverra vulputate enim.
+        </p>
+        <a href="https://www.terra.com.br" target="_blank" rel="noopener"
+           class="inline-block rounded-full bg-marca px-[1.6rem] py-[.85rem] uppercase text-white transition-colors hover:bg-marca-escuro">Terra</a>
+      </article>
+
+    </div>
+  </section>
+
+</body>
+</html>
