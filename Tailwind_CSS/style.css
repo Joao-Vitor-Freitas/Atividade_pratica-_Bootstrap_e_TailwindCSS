@@ -1,0 +1,8 @@
+/* ==========================================================
+   Versão Tailwind: praticamente tudo está nas classes do HTML.
+   Este arquivo guarda só a imagem de fundo do hero, que
+   depende de um caminho de arquivo relativo. Literalmente uma caixa de ferramentas pronta o CSS!
+   ========================================================== */
+.hero {
+  background: url("img/hero.jpg") center / cover no-repeat;
+}
