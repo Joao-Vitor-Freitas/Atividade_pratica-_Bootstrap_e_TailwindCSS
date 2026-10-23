@@ -1,8 +1,60 @@
-$container-max-widths: (
-  sm: 540px,
-  md: 720px,
-  lg: 960px,
-  xl: 1140px,
-  xxl: 1320px
-);
+/* ==========================================================
+   Versão Bootstrap: CSS próprio apenas para o que o
+   Bootstrap não oferece como classe pronta.
+   ========================================================== */
 
+/* Cores e fonte do protótipo sobrescrevendo variáveis do Bootstrap */
+:root {
+  --bs-body-font-family: Arial, Helvetica, sans-serif;
+  --bs-body-color: #444;
+  --cor-marca: #e8573a;
+  --cor-marca-hover: #cf4528;
+  --cor-fundo-cards: #f1f1f1;
+}
+
+/* Container mais largo que o padrão do Bootstrap (1140px) */
+/* O padding de 1.5rem compensa a margem negativa do `row g-5` (gutter de 3rem).
+   Com o padding padrão (12px) a página ganhava rolagem horizontal no celular. */
+.container-pagina {
+  max-width: 1248px; /* 1200px de conteúdo + 24px de padding de cada lado */
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+/* Hero com imagem de fundo */
+.hero {
+  min-height: 607px;
+  background: url("img/hero.jpg") center / cover no-repeat;
+}
+.hero-title {
+  font-family: "Arial Black", Arial, sans-serif;
+  font-size: clamp(3rem, 8vw, 4.5rem);
+  letter-spacing: 1px;
+}
+
+/* Tipografia do conteúdo */
+.titulo-pagina { font-size: 3rem; }
+.subtitulo     { font-size: 1.3rem; }
+.texto         { font-size: 1rem; line-height: 2.05; }
+
+/* Cards */
+.secao-cards { background: var(--cor-fundo-cards); }
+.card-titulo { font-size: 1.4rem; }
+.card-texto  { font-size: .94rem; line-height: 1.1; }
+
+/* Botão personalizado (o Bootstrap não tem a cor da marca) */
+.btn-brand {
+  --bs-btn-color: #fff;
+  --bs-btn-bg: var(--cor-marca);
+  --bs-btn-border-color: var(--cor-marca);
+  --bs-btn-hover-color: #fff;
+  --bs-btn-hover-bg: var(--cor-marca-hover);
+  --bs-btn-hover-border-color: var(--cor-marca-hover);
+  --bs-btn-active-bg: var(--cor-marca-hover);
+  --bs-btn-active-border-color: var(--cor-marca-hover);
+  --bs-btn-padding-x: 1.6rem;
+  --bs-btn-padding-y: .85rem;
+}
+
+/* Mesma altura para as 3 imagens dos cards (evita diferença de 1px por arredondamento) */
+.card-img-fixa { height: 168px; object-fit: cover; }
